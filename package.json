@@ -1,6 +1,6 @@
 {
   "name": "kinbot-plugin-home-assistant",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Control your smart home via Home Assistant. Toggle lights, check sensors, run automations, and monitor your home.",
   "author": "MarlBurroW",
   "license": "MIT",
@@ -28,10 +28,10 @@
     "automation"
   ],
   "peerDependencies": {
-    "@kinbot-developer/sdk": "^0.2.0"
+    "@kinbot-developer/sdk": "^0.3.1"
   },
   "devDependencies": {
-    "@kinbot-developer/sdk": "^0.2.0",
+    "@kinbot-developer/sdk": "^0.3.1",
     "typescript": "^6.0.3"
   }
 }

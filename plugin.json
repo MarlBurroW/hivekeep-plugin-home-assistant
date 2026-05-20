@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@kinbot-developer/sdk/schemas/plugin-manifest.schema.json",
   "name": "kinbot-plugin-home-assistant",
   "displayName": "Home Assistant",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Control your smart home via Home Assistant. Toggle lights, check sensors, run automations, and monitor your home.",
   "author": "MarlBurroW",
   "license": "MIT",

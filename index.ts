@@ -98,6 +98,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
     tools: {
       list_entities: {
         availability: ['main', 'sub-kin'] as const,
+        label: 'List entities',
         create: () =>
           tool({
             description:
@@ -157,6 +158,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       get_entity_state: {
         availability: ['main', 'sub-kin'] as const,
+        label: 'Get entity state',
         create: () =>
           tool({
             description:
@@ -181,6 +183,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       toggle_entity: {
         availability: ['main'] as const,
+        label: 'Toggle entity',
         create: () =>
           tool({
             description:
@@ -214,6 +217,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       call_service: {
         availability: ['main'] as const,
+        label: 'Call service',
         create: () =>
           tool({
             description:
@@ -249,6 +253,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       list_areas: {
         availability: ['main', 'sub-kin'] as const,
+        label: 'List areas',
         create: () =>
           tool({
             description: 'List all areas (rooms) registered in Home Assistant.',
@@ -278,6 +283,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       run_automation: {
         availability: ['main'] as const,
+        label: 'Run automation',
         create: () =>
           tool({
             description: 'Trigger a Home Assistant automation manually.',
@@ -296,6 +302,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
 
       run_scene: {
         availability: ['main'] as const,
+        label: 'Activate scene',
         create: () =>
           tool({
             description: 'Activate a Home Assistant scene.',
