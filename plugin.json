@@ -1,6 +1,6 @@
 {
-  "$schema": "https://unpkg.com/@kinbot-developer/sdk/schemas/plugin-manifest.schema.json",
-  "name": "kinbot-plugin-home-assistant",
+  "$schema": "https://unpkg.com/@hivekeep/sdk/schemas/plugin-manifest.schema.json",
+  "name": "hivekeep-plugin-home-assistant",
   "displayName": "Home Assistant",
   "version": "1.2.0",
   "description": "Control your smart home via Home Assistant. Toggle lights, check sensors, run automations, and monitor your home.",

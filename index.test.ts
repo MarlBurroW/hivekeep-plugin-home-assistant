@@ -72,10 +72,10 @@ describe('home-automation plugin', () => {
       const plugin = createPlugin(makeCtx())
       const tools = plugin.tools as Record<string, any>
 
-      // Read-only tools available to sub-kin
-      expect(tools.list_entities.availability).toContain('sub-kin')
-      expect(tools.get_entity_state.availability).toContain('sub-kin')
-      expect(tools.list_areas.availability).toContain('sub-kin')
+      // Read-only tools available to sub-agent
+      expect(tools.list_entities.availability).toContain('sub-agent')
+      expect(tools.get_entity_state.availability).toContain('sub-agent')
+      expect(tools.list_areas.availability).toContain('sub-agent')
 
       // Write tools are main-only
       expect(tools.toggle_entity.availability).toEqual(['main'])

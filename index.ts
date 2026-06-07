@@ -1,8 +1,8 @@
-import { tool, z } from '@kinbot-developer/sdk'
-import type { PluginContext } from '@kinbot-developer/sdk'
+import { tool, z } from '@hivekeep/sdk'
+import type { PluginContext } from '@hivekeep/sdk'
 
 /**
- * Home Automation plugin for KinBot.
+ * Home Automation plugin for Hivekeep.
  * Provides tools to interact with Home Assistant: list entities, toggle devices,
  * check sensors, call services, and run automations.
  */
@@ -17,7 +17,7 @@ interface HAState {
 /**
  * Build a Home Assistant fetch helper bound to `ctx.http.fetch`. Going
  * through ctx is what enforces the plugin's `http:*` permission and feeds
- * KinBot's per-plugin network-call audit log.
+ * Hivekeep's per-plugin network-call audit log.
  */
 function buildHaFetch(httpFetch: PluginContext['http']['fetch']) {
   return async function haFetch(
@@ -97,7 +97,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
   return {
     tools: {
       list_entities: {
-        availability: ['main', 'sub-kin'] as const,
+        availability: ['main', 'sub-agent'] as const,
         label: 'List entities',
         create: () =>
           tool({
@@ -157,7 +157,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
       },
 
       get_entity_state: {
-        availability: ['main', 'sub-kin'] as const,
+        availability: ['main', 'sub-agent'] as const,
         label: 'Get entity state',
         create: () =>
           tool({
@@ -252,7 +252,7 @@ export default function (ctx: PluginContext<HomeAutomationConfig>) {
       },
 
       list_areas: {
-        availability: ['main', 'sub-kin'] as const,
+        availability: ['main', 'sub-agent'] as const,
         label: 'List areas',
         create: () =>
           tool({

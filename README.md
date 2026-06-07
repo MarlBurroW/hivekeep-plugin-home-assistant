@@ -1,6 +1,6 @@
 # 🏠 Home Automation
 
-Control your smart home through your Kin using [Home Assistant](https://www.home-assistant.io/).
+Control your smart home through your Agent using [Home Assistant](https://www.home-assistant.io/).
 
 ## Features
 
@@ -14,7 +14,7 @@ Control your smart home through your Kin using [Home Assistant](https://www.home
 
 ## Setup
 
-1. Install the plugin from the KinBot store
+1. Install the plugin from the Hivekeep store
 2. In **Settings > Plugins > Home Automation**, configure:
    - **Home Assistant URL** — your HA instance URL (e.g. `http://homeassistant.local:8123`)
    - **Long-Lived Access Token** — generate one in HA: **Profile > Security > Long-Lived Access Tokens**
@@ -36,18 +36,18 @@ Control your smart home through your Kin using [Home Assistant](https://www.home
 
 | Tool | Description | Availability |
 |------|-------------|--------------|
-| `list_entities` | Browse entities by domain or search | Main, Sub-Kin |
-| `get_entity_state` | Get detailed state of an entity | Main, Sub-Kin |
+| `list_entities` | Browse entities by domain or search | Main, Sub-Agent |
+| `get_entity_state` | Get detailed state of an entity | Main, Sub-Agent |
 | `toggle_entity` | Turn devices on/off/toggle | Main only |
 | `call_service` | Call any HA service with custom data | Main only |
-| `list_areas` | List all rooms/areas | Main, Sub-Kin |
+| `list_areas` | List all rooms/areas | Main, Sub-Agent |
 | `run_automation` | Trigger an automation | Main only |
 | `run_scene` | Activate a scene | Main only |
 
-> **Note:** Write operations (toggle, call_service, automations, scenes) are restricted to main Kins for safety.
+> **Note:** Write operations (toggle, call_service, automations, scenes) are restricted to main Agents for safety.
 
 ## Security
 
-- Your HA token is stored encrypted in KinBot's plugin config
+- Your HA token is stored encrypted in Hivekeep's plugin config
 - The plugin only communicates with the configured HA URL
-- Write operations are main-Kin only to prevent sub-Kins from making unauthorized changes
+- Write operations are main-Agent only to prevent sub-Agents from making unauthorized changes
